@@ -18,4 +18,8 @@ var AppModel = Backbone.Model.extend({
     }, this);
   }
 
+  // this.get(params).at.prototype.enqueue: function() {
+  //   console.log('enqueue');
+  // }
+
 });
