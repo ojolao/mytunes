@@ -32,7 +32,7 @@ describe('Songs', function() {
     it('should GET song data from Parse when initialized', function() {
       songs = new Songs();
       expect(requests[0].method).to.equal('GET');
-      expect(requests[0].url).to.include('http://parse.CAMPUS.hackreactor.com/mytunes/classes/songs');
+      expect(requests[0].url).to.include('http://parse.sfm6.hackreactor.com/mytunes/classes/songs');
     });
 
     it('should populate itself with the data returned from the Parse server', function() {
@@ -40,7 +40,7 @@ describe('Songs', function() {
       requests[0].respond(200, { 'Content-Type': 'application/json' }, fakeResponse);
       expect(songs).to.have.length(2);
       expect(songs.at(0).get('title')).to.equal('Never Gonna Mock You Up');
-      expect(songs.at(1).get('artist')).to.equal('BittyBacon');
+      expect(songs.at (1).get('artist')).to.equal('BittyBacon');
     });
 
   });

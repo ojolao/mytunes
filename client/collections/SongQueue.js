@@ -15,8 +15,8 @@ var SongQueue = Backbone.Collection.extend({
         this.playFirst();
       } 
     }, this);
-    this.on('dequeue', function() {
-      this.shift();
+    this.on('dequeue', function(song) {
+      this.remove(song);
     }, this);
   },
 
